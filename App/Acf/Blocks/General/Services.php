@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Acf\Blocks\General;
+
+use App\Acf\Blocks\Helpers\Block;
+use App\Acf\Blocks\RegisterBlock;
+
+final class Services implements \App\Acf\Blocks\Helpers\BlockItem {
+
+	public static function setBlockParams(): void {
+		RegisterBlock::addBlock( new Block( 'services',
+				'Services',
+				'Services block',
+				'templates/parts/services.php',
+				'',
+				'',
+				array(
+					'align' => false,
+					'mode'  => true,
+					'jsx'   => true
+				),
+				array(
+					'title'       => "Services block",
+					'description' => "Services block"
+				),
+				'image',
+				'custom'
+			)
+		);
+	}
+}

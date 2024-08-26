@@ -1,0 +1,57 @@
+.logo-section {
+  &__wrapper {
+    padding: 24px 0;
+
+    @media screen and (min-width: $sm-min-screen) {
+      padding: 32px 19px;
+    }
+
+    @media screen and (min-width: $lg-min-screen) {
+      padding: 32px 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -12px -13px;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin: -12px -29px;
+    }
+
+    &_item {
+      padding: 12px 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 4;
+      max-width: 33.33%;
+      filter: brightness(0) invert(92%) sepia(98%) saturate(100%) hue-rotate(173deg) brightness(73%) contrast(90%);
+      transition: .3s;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding: 12px 29px;
+        max-width: none;
+      }
+
+      &:first-child {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+      }
+
+      &:hover {
+        filter: none;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

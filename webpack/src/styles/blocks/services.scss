@@ -1,0 +1,135 @@
+.services-section {
+  background: $main-bg;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 72px 0;
+  position: relative;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 96px 26px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & h2 {
+      color: $white;
+      margin-bottom: 40px;
+      text-align: center;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-bottom: 64px;
+      }
+
+      & span {
+        color: $theme-blue;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -20px 0;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin: -28px -36px;
+    }
+
+    .services-section__card_wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 20px 0;
+      cursor: pointer;
+      width: 100%;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding: 28px 36px;
+        max-width: 50%;
+      }
+
+      &:hover {
+        .services-section__body_card_link {
+          & span {
+            &:after {
+              animation-name: after-arrow-animation;
+              margin-left: 14px;
+            }
+
+            &:before {
+              animation-name: before-arrow-animation;
+              margin-left: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    &_card {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s;
+      height: 100%;
+
+      &:hover {
+        color: $white;
+      }
+
+      &_data {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &_img {
+          & img {
+            height: auto;
+            width: 100%;
+            max-height: 56px;
+          }
+        }
+
+        & h4 {
+          font-weight: 600;
+          margin-top: 16px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-top: 24px;
+          }
+        }
+
+        & p {
+          font-size: 14px;
+          line-height: 156%;
+          margin-top: 8px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            font-size: 18px;
+            margin-top: 16px;
+          }
+        }
+      }
+
+      &_link {
+        position: relative;
+        margin-top: 16px;
+        color: $theme-red;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+
+        @media screen and (min-width: $sm-min-screen) {
+          margin-top: 24px;
+        }
+
+        & span {
+          position: relative;
+        }
+      }
+    }
+  }
+}

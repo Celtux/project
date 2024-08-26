@@ -1,0 +1,39 @@
+.hero {
+  padding: 128px 0 72px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 270px 0 276px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+
+    & h1 {
+      max-width: 825px;
+
+      & span {
+        color: $theme-blue;
+      }
+    }
+
+    & p {
+      padding-top: 16px;
+      font-size: 16px;
+      line-height: 164%;
+
+      @media screen and (min-width: $sm-min-screen) {
+        font-size: 22px;
+        padding-top: 24px;
+      }
+    }
+  }
+}

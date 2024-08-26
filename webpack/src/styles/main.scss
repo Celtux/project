@@ -1,0 +1,43 @@
+//bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+//global
+@import "global/colors";
+@import "global/breakpoints";
+@import "global/fonts";
+@import "global/global";
+@import "global/inputs";
+@import "global/button";
+
+//swiper slider
+@import "~swiper/swiper-bundle.min.css";
+
+// header/footer styles
+@import "header";
+@import "footer";
+
+//blocks
+@import "blocks/hero";
+@import "blocks/logo";
+@import "blocks/who";
+@import "blocks/services";
+@import "blocks/stats";
+@import "blocks/image";
+@import "blocks/rewards";
+@import "blocks/reviews";
+@import "blocks/cases";
+@import "blocks/advantages";
+@import "blocks/skills";
+@import "blocks/info";
+@import "blocks/faq";
+@import "blocks/form";
+@import "blocks/news_list";
+@import "blocks/post_list";
+@import "blocks/about";
+@import "blocks/process";
+@import "blocks/video";
+
+//404 block
+@import "404";
+
+

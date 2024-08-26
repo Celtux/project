@@ -1,0 +1,218 @@
+.form-section {
+  background: $them;
+  position: relative;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 72px 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 96px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-screen) {
+      flex-direction: row;
+    }
+  }
+
+  &__data {
+    max-width: 387px;
+    display: flex;
+    flex-direction: column;
+
+    & h2 {
+      color: $theme-blue;
+    }
+
+    &_points {
+      display: none;
+
+      @media screen and (min-width: $tablet-screen) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+      }
+
+      & > span {
+        text-transform: capitalize;
+        padding-left: 56px;
+        color: $white;
+      }
+
+      &_list {
+        display: flex;
+        flex-direction: column;
+        margin: -12px 0;
+
+        &_point {
+          padding: 12px 0 12px 33px;
+          position: relative;
+
+          &:first-child {
+            & span {
+              &:before {
+                border-color: $theme-blue;
+              }
+            }
+          }
+
+          &:last-child {
+            &:before {
+              content: none;
+            }
+
+            & span {
+              &:after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -40px;
+                top: -11px;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.5 9L12 16.5L4.5 9' stroke='white' stroke-width='2' stroke-linecap='square' /%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+
+          &:nth-last-child(-n+2) {
+            &:before {
+              height: calc(100% - 15px);
+            }
+          }
+
+          &:before {
+            content: '';
+            background-color: $white;
+            top: 35px;
+            left: 4px;
+            position: absolute;
+            width: 2px;
+            height: calc(100% - 10px);
+          }
+
+          & span {
+            color: $white;
+            font-size: 16px;
+            line-height: 164%;
+            position: relative;
+
+            @media screen and (min-width: $sm-min-screen) {
+              font-size: 22px;
+            }
+
+            &:before {
+              content: '';
+              top: 10px;
+              left: -33px;
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              border: 2px solid $white;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 164%;
+      color: $white;
+      margin-top: 16px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        font-size: 22px;
+        margin-top: 36px;
+      }
+
+      & a {
+        color: $theme-red;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: $theme-red;
+          transition: .3s;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 0;
+
+  @media screen and (min-width: $tablet-screen) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+
+  &__sent-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+
+    &_icon {
+      max-height: 80px;
+      max-width: 80px;
+
+      & svg {
+        width: 100%;
+      }
+    }
+
+    & h2 {
+      margin-top: 24px;
+    }
+
+    & p {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 164%;
+
+      @media screen and (min-width: $sm-min-screen) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &.form-submit {
+    justify-content: center;
+
+    .form__sent-message {
+      display: flex;
+    }
+
+    .wpcf7 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $theme-red;
+  color: $white;
+  padding: 16px 32px;
+  width: fit-content;
+  max-height: 54px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid $theme-red;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+
+  & span {
+    display: none;
+
+    @media screen and (min-width: $tablet-screen) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $theme-red;
+  }
+
+  &.disable-button {
+    background: rgba(255, 65, 92, 0.16);
+    border-color: rgba(255, 65, 92, 0.16);
+    pointer-events: none;
+  }
+
+  &.small {
+    padding: 14px 24px;
+  }
+
+  &.mail-icon {
+    padding: 10px 12px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.00051 5.25H21.0005V18C21.0005 18.1989 21 18.5303 21 18.5303V18.75H3L3.00015 18.5303C3.00015 18.5303 3.00051 18.1989 3.00051 18V5.25Z' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M21 5.25L12 13.5L3 5.25' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s;
+
+      @media screen and (min-width: $tablet-screen) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath d='M3 5.25h18v13.5H3v-.22V5.25z' stroke='%23FF415C' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M21 5.25l-9 8.25-9-8.25' stroke='%23FF415C' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      }
+    }
+
+    @media screen and (min-width: $tablet-screen) {
+      padding: 12px 24px;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: $theme-red;
+
+    &:hover {
+      background-color: $theme-red;
+      color: $white;
+    }
+
+    &.disable-button-secondary {
+      border-color: rgba(255, 65, 92, 0.16);
+      color: rgba(255, 65, 92, 0.16);
+      pointer-events: none;
+    }
+  }
+}

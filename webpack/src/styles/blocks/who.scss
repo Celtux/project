@@ -1,0 +1,52 @@
+.who-section {
+  padding: 72px 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 96px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $lg-min-screen) {
+      flex-direction: row;
+    }
+
+    & h2 {
+      & span {
+        color: $theme-blue;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    margin-left: 0;
+    margin-top: 16px;
+
+    @media screen and (min-width: $lg-min-screen) {
+      margin-left: 90px;
+      margin-top: 0;
+      max-width: 780px;
+    }
+
+    & p {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 164%;
+      color: $paragraph;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-top: 20px;
+        font-size: 22px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

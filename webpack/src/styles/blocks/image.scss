@@ -1,0 +1,21 @@
+.image-section {
+  &__wrapper {
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: auto;
+      max-height: 82px;
+      object-fit: cover;
+      pointer-events: none;
+
+      @media screen and (min-width: $xs-min-screen) {
+        max-height: 150px;
+      }
+
+      @media screen and (min-width: $sm-min-screen) {
+        max-height: 360px;
+      }
+    }
+  }
+}

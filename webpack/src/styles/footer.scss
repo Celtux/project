@@ -1,0 +1,205 @@
+.footer-section {
+  padding: 40px 0;
+  background: $them;
+  position: sticky;
+  width: 100%;
+  top: 100%;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 64px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & a {
+    transition: .3s;
+
+    & path {
+      transition: .3s;
+    }
+
+    &:hover {
+      color: $theme-red;
+
+      & path {
+        fill: $red;
+      }
+    }
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $sm-min-screen) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_address {
+      color: $white;
+      max-width: 230px;
+      line-height: 140%;
+      font-size: 14px;
+      margin-bottom: 40px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-bottom: 0;
+      }
+
+      &_logo {
+        max-width: 148px;
+
+        @media screen and (min-width: $sm-min-screen) {
+          max-width: 179px;
+        }
+
+        & img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      & p {
+        margin-top: 24px;
+      }
+
+      & a {
+        display: block;
+        color: $white;
+        margin-top: 16px;
+      }
+    }
+
+    &_menus {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @media screen and (min-width: $xs-min-screen) {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0 -10px;
+      }
+
+      & nav {
+        width: 100%;
+        border-bottom: 1px solid $low-white;
+
+        @media screen and (min-width: $xs-min-screen) {
+          border: none;
+          max-width: 280px;
+          padding: 0 10px;
+        }
+
+        &:first-child {
+          border-top: 1px solid $low-white;
+          border-bottom: 1px solid $low-white;
+
+          @media screen and (min-width: $xs-min-screen) {
+            border: none;
+          }
+        }
+
+        & ul {
+          margin: -8px 0;
+          padding: 24px 0;
+
+          @media screen and (min-width: $xs-min-screen) {
+            padding: 0;
+          }
+
+          & li {
+            padding: 8px 0;
+
+            & a {
+              color: $white;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 156%;
+
+              @media screen and (min-width: $sm-min-screen) {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 140%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin-top: 64px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &_social-icons {
+      margin: 0 -4px;
+      display: flex;
+
+      &_icon {
+        padding: 0 4px;
+        max-width: 44px;
+        cursor: pointer;
+
+        & svg {
+          width: 100%;
+        }
+      }
+    }
+
+    &_data {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $sm-min-screen) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      & a, p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: $white;
+      }
+
+      & p {
+        & a {
+          &:last-child {
+            margin-left: 24px;
+          }
+        }
+
+        &:first-child {
+          margin-top: 24px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-top: 0;
+          }
+        }
+
+        &:last-child {
+          margin-top: 16px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-left: 32px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

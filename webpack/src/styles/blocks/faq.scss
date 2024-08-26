@@ -1,0 +1,162 @@
+.faq-section {
+  padding: 72px 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 96px 0;
+  }
+
+  .openString {
+    border-top: 1px solid $theme-blue;
+
+    .faq-section__body_item_title {
+      color: $theme-blue;
+    }
+
+    .faq-section__body_item_data {
+      margin-top: 4px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-top: 8px;
+      }
+    }
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' stroke='#FF415C' stroke-width='2' /%3E%3C/svg%3E");
+    }
+  }
+
+  .faq-section__body_item.openString .faq-section__body_item_data {
+    margin-top: 4px;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin-top: 8px;
+    }
+  }
+
+  &__body {
+    margin-top: 40px;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin-top: 64px;
+    }
+
+    &_item {
+      position: relative;
+      cursor: pointer;
+      padding: 16px 0 16px 24px;
+      border-top: 1px solid $gray-sh2;
+      transition: .3s;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding: 16px 0 16px 32px;
+      }
+
+      &:last-of-type {
+        border-bottom: 1px solid $gray-sh2;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' stroke='#899FB6' stroke-width='2' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .3s;
+
+        @media screen and (min-width: $sm-min-screen) {
+          top: 26px;
+        }
+      }
+
+      &:hover {
+        .faq-section__body_item_title {
+          color: $theme-blue;
+        }
+
+        &:before {
+          background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='4' stroke='#FF415C' stroke-width='2' /%3E%3C/svg%3E");
+        }
+      }
+
+      &_title {
+        color: $title;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 164%;
+        transition: .3s;
+
+        @media screen and (min-width: $sm-min-screen) {
+          font-size: 22px;
+        }
+      }
+
+      &_data {
+        font-size: 13px;
+        line-height: 140%;
+        max-height: 0;
+        max-width: 748px;
+        overflow: hidden;
+        transition: .4s ease-in-out;
+        cursor: text !important;
+
+        @media screen and (min-width: $sm-min-screen) {
+          font-size: 16px;
+        }
+
+        ol {
+          margin: 16px 0;
+          padding-left: 22px;
+        }
+
+        & a {
+          color: $theme-red;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: $theme-red;
+            transition: .3s;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    & > a {
+      display: flex;
+      margin-top: 32px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      color: $theme-red;
+
+      &:hover {
+        & span {
+          &:after {
+            animation-name: after-arrow-animation;
+            margin-left: 14px;
+          }
+
+          &:before {
+            animation-name: before-arrow-animation;
+            margin-left: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.cases-section {
+  padding-bottom: 72px;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding-bottom: 96px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > a {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      color: $theme-red;
+      margin-top: 34px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-top: 58px;
+      }
+
+      &:hover {
+        & span {
+          &:after {
+            animation-name: after-arrow-animation;
+            margin-left: 14px;
+          }
+
+          &:before {
+            animation-name: before-arrow-animation;
+            margin-left: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &__case-wrapper {
+    background-image: url('/wp-content/themes/education/assets/img/bgCaseEven.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-top: 24px;
+      }
+    }
+
+    &:nth-child(even) {
+      background-image: url('/wp-content/themes/education/assets/img/bgCaseUneven.jpg');
+
+      .cases-section__case {
+        @media screen and (min-width: $sm-min-screen) {
+          padding: 56px 72px 0 0;
+        }
+
+        .cases-section__case_data {
+          @media screen and (min-width: $sm-min-screen) {
+            padding-left: 72px;
+          }
+
+          @media screen and (min-width: $tablet-min-screen) {
+            padding-left: 0;
+          }
+        }
+
+        .cases-section__case_img {
+          margin-left: 0;
+          margin-right: 20px;
+          align-self: flex-start;
+          order: 2;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-right: 56px;
+          }
+
+          @media screen and (min-width: $tablet-min-screen) {
+            order: -1;
+            align-self: flex-end;
+          }
+        }
+
+        &:hover {
+          .cases-section__case_img {
+            transform: translateY(15px);
+
+            & img {
+              transform: translateX(-15px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__case {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 40px;
+    color: $white;
+    transition: .3s;
+
+    @media screen and (min-width: $sm-min-screen) {
+      padding: 56px 0 0 72px;
+    }
+
+    @media screen and (min-width: $tablet-min-screen) {
+      flex-direction: row;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: transparent !important;
+
+      .cases-section__case_img {
+        transform: translateY(15px);
+
+        & img {
+          transform: translateX(15px);
+        }
+      }
+    }
+
+    &_img {
+      position: relative;
+      transition: .3s;
+      align-self: flex-end;
+      margin-left: 20px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        margin-left: 56px;
+      }
+
+      & img {
+        transition: .3s;
+        position: relative;
+        height: auto;
+        width: 100%;
+        pointer-events: none;
+      }
+    }
+
+    &_data {
+      width: 100%;
+      padding: 0 32px 40px;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding-left: 0;
+      }
+
+      @media screen and (min-width: $tablet-min-screen) {
+        padding: 0 0 40px;
+        max-width: 408px;
+      }
+
+      & h3 {
+        margin-top: 24px;
+
+        @media screen and (min-width: $sm-min-screen) {
+          margin-top: 32px;
+        }
+      }
+
+      & > p {
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 156%;
+
+        @media screen and (min-width: $sm-min-screen) {
+          margin-top: 16px;
+          font-size: 18px;
+        }
+      }
+
+      &_items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px -4px -4px;
+
+        @media screen and (min-width: $sm-min-screen) {
+          margin: 28px -4px -4px;
+        }
+
+        &_item-wrapper {
+          padding: 4px;
+        }
+
+        &_item {
+          padding: 5px 16px;
+          max-height: 28px;
+          background-color: rgba(255, 255, 255, 0.16);
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 140%;
+
+          @media screen and (min-width: $sm-min-screen) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.video {
+  padding: 72px 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 96px 0;
+  }
+
+  &__wrapper {
+    & h2 {
+      text-align: center;
+    }
+  }
+
+  &__player {
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+
+    @media screen and (min-width: $sm-min-screen) {
+      margin-top: 64px;
+    }
+
+    & iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

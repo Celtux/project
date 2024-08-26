@@ -1,0 +1,62 @@
+.rewards-section {
+  padding: 40px 0 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 64px 85px 0;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__swiper {
+    &_slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &_img {
+        & img {
+          width: 100%;
+          max-height: 63px;
+
+          @media screen and (min-width: $xs-screen) {
+            max-height: 97px;
+          }
+
+          @media screen and (min-width: $sm-min-screen) {
+            max-height: 130px;
+          }
+        }
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+
+    @media screen and (min-width: $sm-min-screen) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 0;
+    }
+
+    .swiper-button-prev-rewards, .swiper-button-next-rewards {
+      @media screen and (min-width: $sm-min-screen) {
+        position: absolute;
+        top: -20px;
+      }
+    }
+
+    .swiper-button-next-rewards {
+      right: calc(0% - 60px);
+    }
+
+    .swiper-button-prev-rewards {
+      left: calc(0% - 60px);
+    }
+  }
+}

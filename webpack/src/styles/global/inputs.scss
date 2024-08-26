@@ -1,0 +1,416 @@
+.wpcf7 {
+  width: 100%;
+
+  @media screen and (min-width: $tablet-screen) {
+    margin-left: 0;
+    max-width: 715px;
+  }
+
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    bottom: -20px;
+    color: $theme-red;
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .wpcf7-not-valid {
+    border-color: $theme-red !important;
+  }
+
+  .wpcf7-form {
+    display: flex;
+    flex-direction: column;
+
+    &_name, &_mail, &_mesg {
+      & span {
+        width: 100%;
+      }
+
+      & input, textarea {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $white;
+        color: $white;
+        transition: .3s;
+
+        @media screen and (min-width: $tablet-screen) {
+          max-width: 580px;
+        }
+
+        &:focus-visible, &:hover {
+          outline: none;
+          border-color: $theme-blue;
+        }
+
+        &::placeholder {
+          color: $gray-sh4;
+        }
+      }
+
+      & textarea {
+        padding: 9px 0 0;
+        height: 40px;
+        min-height: 40px;
+      }
+    }
+
+    &_name, &_mail, &_mesg, &_checkbox {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media screen and (min-width: $tablet-screen) {
+        align-items: center;
+        flex-direction: row;
+      }
+
+      & > span {
+        &:first-child {
+          max-width: 115px;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 140%;
+          color: $white;
+
+          @media screen and (min-width: $sm-min-screen) {
+            font-size: 16px;
+          }
+
+          @media screen and (min-width: $tablet-screen) {
+            text-align: right;
+            width: 100%;
+          }
+        }
+
+        &:last-of-type {
+          min-height: 40px;
+          display: flex;
+
+          @media screen and (min-width: $tablet-screen) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    &_checkbox {
+      margin-top: 32px;
+
+      & .wpcf7-form-control-wrap {
+        margin-top: 16px;
+
+        @media screen and (min-width: $tablet-screen) {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+
+      & p {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        @media screen and (min-width: $tablet-screen) {
+          flex-direction: row;
+        }
+
+        & > span {
+          &:first-child {
+            color: $white;
+            width: 100%;
+            max-width: 115px;
+            text-align: left;
+
+            @media screen and (min-width: $tablet-screen) {
+              text-align: right;
+            }
+          }
+
+          &:last-of-type {
+            & > span {
+              margin: 0 -12px;
+              display: flex;
+              flex-wrap: wrap;
+
+              @media screen and (min-width: $sm-min-screen) {
+                margin: 0 -20px;
+              }
+
+              & > span {
+                margin: 0;
+                padding: 0 12px;
+                color: $white;
+                font-size: 13px;
+                line-height: 140%;
+
+                @media screen and (min-width: $sm-min-screen) {
+                  font-size: 16px;
+                  padding: 0 20px;
+                }
+
+                & label {
+                  & input[type=radio] {
+                    display: none;
+
+                    &:checked {
+                      & + span {
+                        &:before {
+                          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='%23127AFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 17.25C14.8995 17.25 17.25 14.8995 17.25 12C17.25 9.10051 14.8995 6.75 12 6.75C9.10051 6.75 6.75 9.10051 6.75 12C6.75 14.8995 9.10051 17.25 12 17.25Z' fill='%23127AFF' /%3E%3C/svg%3E");
+                          background-repeat: no-repeat;
+                          background-position: center;
+                        }
+                      }
+                    }
+                  }
+
+                  & span {
+                    position: relative;
+                    cursor: pointer;
+                    padding-left: 27px;
+
+                    &:before {
+                      content: '';
+                      cursor: pointer;
+                      position: absolute;
+                      left: 0;
+                      bottom: -1px;
+                      width: 24px;
+                      height: 24px;
+                      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='%23F9FBFD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+                      background-repeat: no-repeat;
+                      background-position: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+    &_mesg {
+      & > span {
+        &:first-child {
+          padding-top: 7px;
+          align-self: flex-start;
+        }
+
+        &:last-of-type {
+          max-height: none;
+        }
+      }
+    }
+
+    &_terms {
+      width: 100%;
+      margin-top: 32px;
+
+      @media screen and (min-width: $tablet-screen) {
+        align-self: flex-end;
+        max-width: 580px;
+      }
+
+      & p {
+        color: $gray-sh4;
+        font-size: 12px;
+        line-height: 140%;
+
+        @media screen and (min-width: $sm-min-screen) {
+          font-size: 14px;
+        }
+
+        & a {
+          color: $theme-red;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: $theme-red;
+            transition: .3s;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &_send {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 32px;
+
+      @media screen and (min-width: $tablet-screen) {
+        align-self: flex-end;
+        max-width: 580px;
+      }
+
+      &_file {
+        position: relative;
+        width: 100%;
+        max-width: 257px;
+
+        & p {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          top: -9px;
+          position: absolute;
+
+          @media screen and (min-width: $tablet-screen) {
+            width: auto;
+            position: inherit;
+            top: -1px;
+          }
+
+          & .button {
+            max-width: 279px;
+            width: 100%;
+          }
+
+          & svg {
+            position: absolute;
+            display: none;
+            right: 0;
+            top: 50px;
+            cursor: pointer;
+
+            @media screen and (min-width: $tablet-screen) {
+              top: 175%;
+            }
+          }
+
+          & label {
+            margin: 0;
+
+            & > span {
+              display: flex;
+              align-items: center;
+
+              & .wpcf7-not-valid-tip {
+                top: 70px;
+
+                @media screen and (min-width: $tablet-screen) {
+                  top: 50px;
+                }
+              }
+
+              &:before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: block;
+                top: -3px;
+                left: 0;
+                cursor: pointer;
+                position: absolute;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.25 14.9159V8.5C17.25 5.60051 14.8995 3.25 12 3.25C9.10051 3.25 6.75 5.60051 6.75 8.5V17.25C6.75 19.183 8.317 20.75 10.25 20.75C12.183 20.75 13.75 19.183 13.75 17.25V8.5C13.75 7.5335 12.9665 6.75 12 6.75C11.0335 6.75 10.25 7.5335 10.25 8.5V16.0833' stroke='white' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='round' /%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+
+              &:after {
+                content: 'Attach file';
+                position: absolute;
+                color: $white;
+                display: block;
+                background: transparent;
+                padding: 0;
+                margin-left: 28px;
+                outline: none;
+                white-space: nowrap;
+                -webkit-user-select: none;
+                cursor: pointer;
+                font-weight: 600;
+                line-height: 100%;
+                font-size: 18px;
+              }
+
+              & input {
+                visibility: hidden;
+                color: $gray-sh4;
+                position: relative;
+                max-width: 113px;
+                top: 50px;
+                font-size: 14px;
+                line-height: 140%;
+
+                @media screen and (min-width: $tablet-screen) {
+                  max-width: 237px;
+                  top: 31px;
+                }
+
+                &::-webkit-file-upload-button {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & > p {
+        max-width: 279px;
+        width: 100%;
+
+        & input {
+          width: 100%;
+        }
+
+        .wpcf7-spinner {
+          display: none;
+        }
+      }
+    }
+
+    & > p {
+      margin: -12px 0;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding-top: 33px;
+        margin: -16px 0;
+      }
+
+      @media screen and (min-width: $tablet-screen) {
+        padding-top: 33px;
+      }
+
+      & label {
+        padding: 12px 0;
+        margin: 0;
+
+        @media screen and (min-width: $sm-min-screen) {
+          padding: 16px 0;
+        }
+      }
+    }
+  }
+}
+
+.wpcf7-form_send_file.contains_file {
+  & .wpcf7-file {
+    visibility: visible;
+  }
+}
+
+.wpcf7-form_send_file.contains_file svg {
+  display: block !important;
+}

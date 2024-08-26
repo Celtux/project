@@ -1,0 +1,172 @@
+.reviews-section {
+  padding: 104px 0;
+
+  @media screen and (min-width: $sm-min-screen) {
+    padding: 136px 0;
+  }
+
+  &__swiper {
+    display: flex;
+    flex-direction: column;
+
+    &_slide {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $sm-min-screen) {
+        flex-direction: row;
+      }
+
+      &_description {
+        position: relative;
+
+        @media screen and (min-width: $sm-min-screen) {
+          padding: 24px 0 0 100px;
+          flex-basis: 70%;
+        }
+
+        & p {
+          font-size: 16px;
+          line-height: 164%;
+          color: $paragraph;
+          font-style: italic;
+          margin-top: 16px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-top: 0;
+            font-size: 22px;
+          }
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 48px;
+          height: 48px;
+          background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.39062 42.2398V30.4598C1.39062 25.7731 2.08729 21.4664 3.48063 17.5398C5.00063 13.4864 7.59729 9.55976 11.2706 5.75977L17.5406 10.5098C14.8806 13.4231 12.9806 16.1464 11.8406 18.6798C10.8273 21.0864 10.2573 23.4931 10.1306 25.8998H17.5406V42.2398H1.39062ZM30.4606 42.2398V30.4598C30.4606 25.7731 31.1573 21.4664 32.5506 17.5398C34.0706 13.4864 36.6673 9.55976 40.3406 5.75977L46.6106 10.5098C43.9506 13.4231 42.0506 16.1464 40.9106 18.6798C39.8973 21.0864 39.3273 23.4931 39.2006 25.8998H46.6106V42.2398H30.4606Z' fill='%23112244'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @media screen and (min-width: $sm-min-screen) {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+
+      &_info {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 24px;
+
+        @media screen and (min-width: $sm-min-screen) {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-left: 48px;
+          flex-basis: 30%;
+        }
+
+        &_img {
+          max-height: 70px;
+          max-width: 70px;
+
+          & img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        &_data {
+          display: flex;
+          flex-direction: column;
+          margin-left: 16px;
+
+          @media screen and (min-width: $sm-min-screen) {
+            margin-left: 0;
+          }
+
+          & p {
+
+            @media screen and (min-width: $sm-min-screen) {
+              margin-top: 16px;
+            }
+
+            &:first-child {
+              text-transform: capitalize;
+              font-size: 16px;
+              line-height: 164%;
+              color: $paragraph;
+
+              @media screen and (min-width: $sm-min-screen) {
+                font-size: 22px;
+              }
+            }
+
+            &:last-of-type {
+              margin-top: 0;
+              font-size: 12px;
+              line-height: 140%;
+              color: $gray-sh5;
+
+              @media screen and (min-width: $sm-min-screen) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__control-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    @media screen and (min-width: $sm-min-screen) {
+      padding-left: 100px;
+    }
+
+    &_controls {
+      display: flex;
+
+      @media screen and (min-width: $sm-min-screen) {
+        flex-basis: 70%;
+      }
+
+      .swiper-button-next-reviews {
+        margin-left: 16px;
+      }
+    }
+
+    & a {
+      padding-right: 23px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      color: $theme-red;
+
+      @media screen and (min-width: $sm-min-screen) {
+        padding-right: 0;
+        flex-basis: 30%;
+      }
+
+      &:hover {
+        & span {
+          &:after {
+            animation-name: after-arrow-animation;
+            margin-left: 14px;
+          }
+
+          &:before {
+            animation-name: before-arrow-animation;
+            margin-left: 14px;
+          }
+        }
+      }
+    }
+  }
+}
